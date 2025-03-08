@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Portofolio Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portofolio</a>
+        <nav class="nav-links">
+                <a href="#Home" class="active">Beranda</a>
+                <a href="#About">Tentang</a>
+                <a href="#Skills">Keahlian</a>
+                <a href="#Testimonials">Testimoni</a>
+                <a href="#Contact">Kontak</a>
+        </nav>
+        <div class="menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    
+    <!-- Home Section -->
+    <section class="home" id="Home">
+        <div class="home-img">
+            <img src="BAKTI JAS.jpeg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, it's <span>Bakti</span></h1>
+            <h3 class="typing-text">I'm a<span></span></h3>
+            <p>Saya seorang UI Designer yang berfokus pada pengalaman pengguna</p>
+            <p>yang intuitif dan desain yang menarik.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/pamuunqkas_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <a href="file:///F:/BAKTI/PORTOFOLIO%20CV/PORTOFOLIO%20CV%20BAKTI.pdf" class="btn">Portofolio</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="About" class="about">
+        <h2>Tentang Saya</h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="bakti medali.jpeg" alt="Foto Profil">
+            </div>
+            <div class="about-text">
+                <h3>Halo, Saya Bakti Dwi Pamungkas</h3>
+                <p>
+                    Saya adalah seorang desainer grafis dan pengembang web dengan pengalaman lebih dari 5 tahun di industri kreatif. 
+                    Saya memiliki passion dalam menciptakan desain yang tidak hanya indah secara visual tetapi juga fungsional dan mudah digunakan.
+                </p>
+                <p>
+                    Keterampilan saya meliputi desain UI/UX, ilustrasi digital, branding, dan pengembangan web. 
+                    Saya selalu berusaha untuk terus belajar dan mengikuti perkembangan terbaru dalam dunia desain dan teknologi.
+                </p>
+                <p>
+                    Di waktu luang, saya menikmati menggambar, menjelajahi tren desain terbaru, dan berkolaborasi dengan tim kreatif untuk menciptakan solusi yang inovatif.
+                </p>
+                <a href="#Contact" class="btn">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="Skills" class="skills">
+        <h2>Keahlian</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Desain Web</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Desain Grafis</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Figma</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%;">95%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>AI System Design</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;">80%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Why Hire Me Section -->
+    <section id="WhyHireMe" class="why-hire-me">
+        <h2>Mengapa Memperkerjakan Saya?</h2>
+        <div class="reasons">
+            <div class="reason-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Inovasi</h3>
+                <p>Saya selalu mencari solusi inovatif untuk memecahkan masalah kompleks dengan teknologi terkini.</p>
+            </div>
+            <div class="reason-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Hasil Terukur</h3>
+                <p>Setiap proyek yang saya kerjakan selalu menghasilkan peningkatan yang terukur dan berdampak positif.</p>
+            </div>
+            <div class="reason-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Komitmen</h3>
+                <p>Saya berkomitmen untuk memberikan hasil terbaik dan memastikan kepuasan client.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="Testimonials" class="testimonials">
+        <h2>Testimoni Client</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <p>"Bakti sangat profesional dan hasil kerjanya melebihi ekspektasi. Sangat direkomendasikan!"</p>
+                <h3>Yusuf</h3>
+                <h4>CEO, Tech Solutions Inc.</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Proyek yang dikerjakan tepat waktu dan dengan kualitas yang sangat baik."</p>
+                <h3>Asep Nugraha</h3>
+                <h4>CTO, Innovate Corp.</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Sangat puas dengan hasil kerja Bakti, akan bekerja sama lagi di masa depan."</p>
+                <h3>Tirta</h3>
+                <h4>Founder, DataWorks</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="Portfolio" class="portfolio">
+        <h2>Portofolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <a href="https://www.canva.com/design/DAGf_qmA94o/GiF1OSzLYfE_INlkd20Onw/edit">
+                    <img src="portofolio1.png" alt="Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Desain Grafis</h3>
+                        <p>Branding untuk perusahaan teknologi.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://www.figma.com/design/SY4lEl2rxCBzmMKqIIz9wz/UAS-IMK-%26-ARKOM?node-id=98-2&t=Mspa0MeVzVo9iZB5-1">
+                    <img src="HOME PAGE.png" alt="Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Desain Web</h3>
+                        <p>Website e-commerce dengan UI/UX modern.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://www.canva.com/design/DAGf_tbYvtk/sG_4KhVHfIxa9p6k1jj3vA/edit">
+                    <img src="portofolio2.png" alt="Project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Ilustrasi Digital</h3>
+                        <p>Ilustrasi untuk buku anak-anak.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact" class="contact">
+        <h2>Kontak</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form id="contactForm" action="#" method="POST">
+                    <input type="text" id="name" name="name" placeholder="Nama Lengkap" required pattern="[A-Za-z\s]+" title="Nama lengkap hanya boleh mengandung huruf dan spasi.">
+                    <input type="email" id="email" name="email" placeholder="Email Anda" required>
+                    <input type="text" id="phone" name="phone" placeholder="Nomor Handphone" require pattern="[0-9]{10,13}" title="Nomor handphone harus 10-13 digit angka." inputmode="numeric">
+                    <textarea id="message" name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                    <button type="submit" class="btn">Kirim</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p>Jika Anda memiliki pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya melalui:</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: baktidwipamungkas@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> Telepon: +6289656428641</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Alamat: Sumedang, Indonesia</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hak Cipta</h3>
+                <p>&copy; 2025 Bakti Dwi Pamungkas. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="#Home" class="active">Beranda</a></li>
+                    <li><a href="#About">Tentang Saya</a></li>
+                    <li><a href="#Portfolio">Portofolio</a></li>
+                    <li><a href="#Contact">Kontak</a></li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Email: baktidwipamungkas@gmail.com</p>
+                <p>Telepon: +62896 5642 8641</p>
+                <p>Alamat: Sumedang, Indonesia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Media Sosial</h3>
+                <div class="social-icons-footer">
+                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Kebijakan</h3>
+                <ul>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat dan Ketentuan</a></li>
+                    <li><a href="#">Peta Situs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Dibuat dengan ❤️ oleh Bakti Dwi Pamungkas</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>    
+</body>
+</html>
