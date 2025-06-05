@@ -51,11 +51,15 @@ $(document).ready(function() {
             isValid = false;
         }
 
+        // Cek parameter URL untuk menampilkan pesan sukses
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
         // Jika semua validasi berhasil, formulir dapat dikirim
         if (isValid) {
-            alert('Formulir berhasil dikirim!');
-            // Uncomment baris berikut jika ingin mengirim formulir
-            // this.submit();
+            alert('Pesan Anda telah berhasil dikirim!');
+            // Hapus parameter dari URL tanpa reload
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
     });
 
@@ -75,4 +79,3 @@ function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
-

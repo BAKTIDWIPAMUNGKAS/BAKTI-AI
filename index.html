@@ -4,265 +4,755 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
-    <script src="script.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Portofolio Website</title>
+    <title>ML Engineer & Data Scientist Portfolio</title>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Portofolio</a>
-        <nav class="nav-links">
-                <a href="#Home" class="active">Beranda</a>
-                <a href="#About">Tentang</a>
-                <a href="#Skills">Keahlian</a>
-                <a href="#Testimonials">Testimoni</a>
-                <a href="#Contact">Kontak</a>
-        </nav>
-        <div class="menu" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code-branch logo-icon"></i>
+                <span>Portfolio</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#Home" class="active">Home</a>
+                <a href="#About">About</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Publications">Research</a>
+                <a href="#Contact">Contact</a>
+            </nav>
+            <div class="menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
     
     <!-- Home Section -->
     <section class="home" id="Home">
-        <div class="home-img">
-            <img src="BAKTI JAS.jpeg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hi, it's <span>Bakti</span></h1>
-            <h3 class="typing-text">I'm a<span></span></h3>
-            <p>Saya seorang UI Designer yang berfokus pada pengalaman pengguna</p>
-            <p>yang intuitif dan desain yang menarik.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/pamuunqkas_/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <div class="container home-container">
+            <div class="home-content">
+                <h1>Hi, I'm <span>Bakti</span></h1>
+                <h3>I'm a <span class="typing-text"></span></h3>
+                <p>Specializing in developing data-driven solutions and AI systems that transform complex problems into innovative opportunities. Let's build the future with intelligent technology.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fab fa-github"></i></a>
+                    <a href="https://www.kaggle.com/"><i class="fab fa-kaggle"></i></a>
+                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#Projects" class="btn">View Projects</a>
+                <a href="#Contact" class="btn btn-outline" style="margin-left: 1rem;">Contact Me</a>
             </div>
-            <a href="file:///F:/BAKTI/PORTOFOLIO%20CV/PORTOFOLIO%20CV%20BAKTI.pdf" class="btn">Portofolio</a>
+            <div class="home-img">
+                <img src="img/Frame 1.png" alt="Bakti Dwi Pamungkas - Machine Learning Engineer">
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="About" class="about">
-        <h2>Tentang Saya</h2>
-        <div class="about-content">
-            <div class="about-img">
-                <img src="bakti medali.jpeg" alt="Foto Profil">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know my journey, experience, and passion for machine learning and data science</p>
             </div>
-            <div class="about-text">
-                <h3>Halo, Saya Bakti Dwi Pamungkas</h3>
-                <p>
-                    Saya adalah seorang desainer grafis dan pengembang web dengan pengalaman lebih dari 5 tahun di industri kreatif. 
-                    Saya memiliki passion dalam menciptakan desain yang tidak hanya indah secara visual tetapi juga fungsional dan mudah digunakan.
-                </p>
-                <p>
-                    Keterampilan saya meliputi desain UI/UX, ilustrasi digital, branding, dan pengembangan web. 
-                    Saya selalu berusaha untuk terus belajar dan mengikuti perkembangan terbaru dalam dunia desain dan teknologi.
-                </p>
-                <p>
-                    Di waktu luang, saya menikmati menggambar, menjelajahi tren desain terbaru, dan berkolaborasi dengan tim kreatif untuk menciptakan solusi yang inovatif.
-                </p>
-                <a href="#Contact" class="btn">Hubungi Saya</a>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="img/Frame 2.png" alt="Bakti Dwi Pamungkas - Profile">
+                </div>
+                <div class="about-text">
+                    <h3>Machine Learning Engineer & Data Scientist</h3>
+                    <p>
+                        I'm Bakti Dwi Pamungkas, a passionate Machine Learning Engineer with 5+ years of experience developing AI solutions across industries. My expertise lies in natural language processing, computer vision, and predictive analytics.
+                    </p>
+                    <p>
+                        With a Master's degree in Computer Science and specialization in Artificial Intelligence, I combine theoretical knowledge with practical implementation to create scalable machine learning systems that solve real-world problems.
+                    </p>
+                    <p>
+                        I'm driven by curiosity and the belief that AI can transform our world for the better. When not training models, I contribute to open-source projects and write technical articles to share knowledge with the community.
+                    </p>
+                    <div class="key-stats">
+                        <div class="stat-item">
+                            <h4>30+</h4>
+                            <p>ML Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>12</h4>
+                            <p>Research Papers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                    <a href="" class="btn">Download CV</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="Skills" class="skills">
-        <h2>Keahlian</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <h3>Desain Web</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;">90%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Desain Grafis</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 85%;">85%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Figma</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 95%;">95%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>AI System Design</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;">80%</div>
-                </div>
-            </div>
+<section class="skills" id="Skills">
+    <div class="container">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p>My expertise in machine learning, data science, and software development technologies</p>
         </div>
-    </section>
-
-        <!-- Why Hire Me Section -->
-    <section id="WhyHireMe" class="why-hire-me">
-        <h2>Mengapa Memperkerjakan Saya?</h2>
-        <div class="reasons">
-            <div class="reason-item">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Inovasi</h3>
-                <p>Saya selalu mencari solusi inovatif untuk memecahkan masalah kompleks dengan teknologi terkini.</p>
-            </div>
-            <div class="reason-item">
-                <i class="fas fa-chart-line"></i>
-                <h3>Hasil Terukur</h3>
-                <p>Setiap proyek yang saya kerjakan selalu menghasilkan peningkatan yang terukur dan berdampak positif.</p>
-            </div>
-            <div class="reason-item">
-                <i class="fas fa-handshake"></i>
-                <h3>Komitmen</h3>
-                <p>Saya berkomitmen untuk memberikan hasil terbaik dan memastikan kepuasan client.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="Testimonials" class="testimonials">
-        <h2>Testimoni Client</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-item">
-                <p>"Bakti sangat profesional dan hasil kerjanya melebihi ekspektasi. Sangat direkomendasikan!"</p>
-                <h3>Yusuf</h3>
-                <h4>CEO, Tech Solutions Inc.</h4>
-            </div>
-            <div class="testimonial-item">
-                <p>"Proyek yang dikerjakan tepat waktu dan dengan kualitas yang sangat baik."</p>
-                <h3>Asep Nugraha</h3>
-                <h4>CTO, Innovate Corp.</h4>
-            </div>
-            <div class="testimonial-item">
-                <p>"Sangat puas dengan hasil kerja Bakti, akan bekerja sama lagi di masa depan."</p>
-                <h3>Tirta</h3>
-                <h4>Founder, DataWorks</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="Portfolio" class="portfolio">
-        <h2>Portofolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <a href="https://www.canva.com/design/DAGf_qmA94o/GiF1OSzLYfE_INlkd20Onw/edit">
-                    <img src="portofolio1.png" alt="Project 1">
-                    <div class="portfolio-overlay">
-                        <h3>Desain Grafis</h3>
-                        <p>Branding untuk perusahaan teknologi.</p>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Machine Learning & AI</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fas fa-brain"></i> Deep Learning</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="https://www.figma.com/design/SY4lEl2rxCBzmMKqIIz9wz/UAS-IMK-%26-ARKOM?node-id=98-2&t=Mspa0MeVzVo9iZB5-1">
-                    <img src="HOME PAGE.png" alt="Project 2">
-                    <div class="portfolio-overlay">
-                        <h3>Desain Web</h3>
-                        <p>Website e-commerce dengan UI/UX modern.</p>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-language"></i> Natural Language Processing</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="https://www.canva.com/design/DAGf_tbYvtk/sG_4KhVHfIxa9p6k1jj3vA/edit">
-                    <img src="portofolio2.png" alt="Project 3">
-                    <div class="portfolio-overlay">
-                        <h3>Ilustrasi Digital</h3>
-                        <p>Ilustrasi untuk buku anak-anak.</p>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-eye"></i> Computer Vision</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%;"></div>
+                        </div>
                     </div>
-                </a>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-chart-line"></i> Time Series Analysis</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-robot"></i> Reinforcement Learning</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 82%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-project-diagram"></i> Graph Neural Networks</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Programming & Frameworks</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fab fa-python"></i> Python</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fab fa-r-project"></i> R</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-fire"></i> PyTorch</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-cogs"></i> TensorFlow</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-table"></i> SQL</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-stream"></i> Apache Spark</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 82%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>DevOps & MLOps</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fab fa-docker"></i> Docker</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fab fa-aws"></i> AWS</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fab fa-google"></i> Google Cloud</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-code-branch"></i> Git & CI/CD</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-cubes"></i> Kubernetes</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-infinity"></i> MLflow</h4>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="Contact" class="contact">
-        <h2>Kontak</h2>
+<!-- Projects Section -->
+<section class="projects" id="Projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+            <p>A showcase of my work in machine learning, AI, and data science</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/project1.png" alt="Medical Imaging AI">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Medical Imaging AI Diagnostics</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Computer Vision</span>
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">Healthcare</span>
+                    </div>
+                    <p class="project-desc">
+                        Developed a deep learning system for automated detection of abnormalities in X-ray images with 94% accuracy, reducing diagnosis time by 60%.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-sm">View Details</a>
+                        <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/project2.png" alt="NLP Recommendation System">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Advanced NLP Recommendation Engine</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">BERT</span>
+                        <span class="project-tag">AWS</span>
+                    </div>
+                    <p class="project-desc">
+                        Built a content recommendation system using transformer-based NLP models, increasing user engagement by 37% and content discovery by 45%.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-sm">View Details</a>
+                        <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/project3.png" alt="Financial Forecasting">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Financial Time Series Forecasting</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Time Series</span>
+                        <span class="project-tag">LSTM</span>
+                        <span class="project-tag">Finance</span>
+                    </div>
+                    <p class="project-desc">
+                        Implemented a hybrid LSTM-Attention model for financial market prediction, achieving 23% higher accuracy than traditional forecasting methods.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-sm">View Details</a>
+                        <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/project4.png" alt="Autonomous Drone">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Autonomous Drone Navigation System</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Reinforcement Learning</span>
+                        <span class="project-tag">Computer Vision</span>
+                        <span class="project-tag">Robotics</span>
+                    </div>
+                    <p class="project-desc">
+                        Designed a reinforcement learning framework for autonomous drone navigation in complex environments with obstacle avoidance capabilities.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-sm">View Details</a>
+                        <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/project5.png" alt="NLP Chatbot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Multilingual Customer Service AI</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">Transformers</span>
+                        <span class="project-tag">MLOps</span>
+                    </div>
+                    <p class="project-desc">
+                        Created a production-ready multilingual chatbot system capable of handling complex customer inquiries across 12 languages with 89% resolution rate.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-sm">View Details</a>
+                        <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/project6.png" alt="Retail Analytics">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Retail Analytics & Demand Forecasting</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Time Series</span>
+                        <span class="project-tag">Big Data</span>
+                        <span class="project-tag">Spark</span>
+                    </div>
+                    <p class="project-desc">
+                        Engineered a scalable retail analytics platform processing millions of transactions daily to forecast demand with 97% accuracy across 15,000+ products.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-sm">View Details</a>
+                        <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications Section -->
+<section class="publications" id="Publications">
+    <div class="container">
+        <div class="section-title">
+            <h2>Research Publications</h2>
+            <p>My contributions to academic research in machine learning and artificial intelligence</p>
+        </div>
+        <div class="publication-item">
+            <div class="publication-year">2025</div>
+            <div class="publication-content">
+                <h3>HyperFormer: Hyperparameter Optimization for Transformer Models in Low-Resource Settings</h3>
+                <p class="publication-authors">Bakti Dwi Pamungkas</p>
+                <p class="publication-journal">IEEE Transactions on Pattern Analysis and Machine Intelligence</p>
+                <p class="publication-abstract">
+                    This paper introduces an efficient Bayesian optimization framework specifically designed for transformer model architectures in computational-constrained environments.
+                </p>
+                <a href="#" class="btn btn-sm">Read Paper</a>
+            </div>
+        </div>
+
+        <div class="publications-list">
+            <div class="publication-item">
+                <div class="publication-year">2024</div>
+                <div class="publication-content">
+                    <h3>Transformer-based Approaches for Cross-domain Few-shot Learning</h3>
+                    <p class="publication-authors">Bakti Dwi Pamungkas</p>
+                    <p class="publication-journal">Conference on Neural Information Processing Systems (NeurIPS 2024)</p>
+                    <p class="publication-abstract">
+                        This research introduces a novel architecture for cross-domain knowledge transfer in few-shot learning scenarios, significantly outperforming state-of-the-art methods on benchmark datasets.
+                    </p>
+                    <a href="#" class="btn btn-sm">Read Paper</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="publication-year">2023</div>
+                <div class="publication-content">
+                    <h3>Efficient Training of Graph Neural Networks for Large-Scale Molecular Property Prediction</h3>
+                    <p class="publication-authors">Bakti Dwi Pamungkas</p>
+                    <p class="publication-journal">International Conference on Machine Learning (ICML 2023)</p>
+                    <p class="publication-abstract">
+                        We propose a novel batch-training methodology for graph neural networks that reduces memory requirements by 60% while maintaining prediction accuracy for molecular property prediction tasks.
+                    </p>
+                    <a href="#" class="btn btn-sm">Read Paper</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="Contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaboration or have a question? Reach out to me</p>
+        </div>
         <div class="contact-container">
             <div class="contact-form">
-                <h3>Kirim Pesan</h3>
-                <form id="contactForm" action="#" method="POST">
-                    <input type="text" id="name" name="name" placeholder="Nama Lengkap" required pattern="[A-Za-z\s]+" title="Nama lengkap hanya boleh mengandung huruf dan spasi.">
-                    <input type="email" id="email" name="email" placeholder="Email Anda" required>
-                    <input type="text" id="phone" name="phone" placeholder="Nomor Handphone" require pattern="[0-9]{10,13}" title="Nomor handphone harus 10-13 digit angka." inputmode="numeric">
-                    <textarea id="message" name="message" placeholder="Pesan Anda" rows="5" required></textarea>
-                    <button type="submit" class="btn">Kirim</button>
+                <h3>Send a Message</h3>
+                <form id="contactForm" action="contact_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
             <div class="contact-info">
-                <h3>Informasi Kontak</h3>
-                <p>Jika Anda memiliki pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya melalui:</p>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> Email: baktidwipamungkas@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> Telepon: +6289656428641</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Alamat: Sumedang, Indonesia</li>
-                </ul>
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out for collaborations, consulting opportunities, or just to say hello. I'll get back to you as soon as possible.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Sumedang, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>baktidwipamungkas@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+62 896 5642 8641</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Website</h4>
+                            <p>https://bakti-ai.vercel.app/</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Hak Cipta</h3>
-                <p>&copy; 2025 Bakti Dwi Pamungkas. All rights reserved.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Tautan Cepat</h3>
-                <ul>
-                    <li><a href="#Home" class="active">Beranda</a></li>
-                    <li><a href="#About">Tentang Saya</a></li>
-                    <li><a href="#Portfolio">Portofolio</a></li>
-                    <li><a href="#Contact">Kontak</a></li>
-                    <li><a href="#Blog">Blog</a></li>
-                    <li><a href="#FAQ">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Kontak</h3>
-                <p>Email: baktidwipamungkas@gmail.com</p>
-                <p>Telepon: +62896 5642 8641</p>
-                <p>Alamat: Sumedang, Indonesia</p>
-            </div>
-            <div class="footer-section">
-                <h3>Media Sosial</h3>
+                <h3>Bakti.AI</h3>
+                <p>Developing cutting-edge machine learning solutions to solve complex problems across industries. Turning data into actionable insights and intelligence.</p>
                 <div class="social-icons-footer">
-                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/baktidwipamungkas/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/BAKTIDWIPAMUNGKAS"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pamuunqkas_/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-section">
-                <h3>Kebijakan</h3>
+                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Kebijakan Privasi</a></li>
-                    <li><a href="#">Syarat dan Ketentuan</a></li>
-                    <li><a href="#">Peta Situs</a></li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Publications">Research</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">ML Consulting</a></li>
+                    <li><a href="#">AI Solution Development</a></li>
+                    <li><a href="#">Data Strategy</a></li>
+                    <li><a href="#">Technical Workshops</a></li>
+                    <li><a href="#">ML System Design</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to my newsletter for the latest updates on AI research and ML engineering insights.</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" style="width: 100%; padding: 0.8rem; border-radius: 5px; border: none; margin-bottom: 1rem;">
+                    <button type="submit" class="btn btn-sm" style="width: 100%;">Subscribe</button>
+                </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Dibuat dengan ❤️ oleh Bakti Dwi Pamungkas</p>
+            <p>&copy; 2025 Bakti.AI. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
+<!-- JavaScript -->
+<script>
+    // Mobile menu toggle
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+    
+    // Scroll effect for header
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
-    </script>    
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
+    
+    // Active link highlighting
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.scrollY;
+        
+        document.querySelectorAll('section').forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Typing effect for roles
+    const roles = ["Machine Learning Engineer", "Data Scientist", "AI Researcher", "Computer Vision Specialist", "NLP Expert"];
+    let currentRoleIndex = 0;
+    let isDeleting = false;
+    let txt = '';
+    let typeSpeed = 100;
+    
+    function typeEffect() {
+        const currentRole = roles[currentRoleIndex];
+        
+        if (isDeleting) {
+            txt = currentRole.substring(0, txt.length - 1);
+        } else {
+            txt = currentRole.substring(0, txt.length + 1);
+        }
+        
+        document.querySelector('.typing-text').textContent = txt;
+        
+        let delta = isDeleting ? typeSpeed / 2 : typeSpeed;
+        
+        if (!isDeleting && txt === currentRole) {
+            delta = 2000; // Pause at end of typing
+            isDeleting = true;
+        } else if (isDeleting && txt === '') {
+            isDeleting = false;
+            currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+            delta = 500; // Pause before typing new text
+        }
+        
+        setTimeout(typeEffect, delta);
+    }
+    
+    // Start the typing effect when the page loads
+    window.addEventListener('load', typeEffect);
+    
+    // Add animation to skill bars on scroll
+    const skillLevels = document.querySelectorAll('.skill-level');
+    
+    const animateSkills = () => {
+        skillLevels.forEach(level => {
+            const width = level.getAttribute('style').match(/width: (\d+)%/)[1];
+            level.style.width = '0%';
+            
+            setTimeout(() => {
+                level.style.transition = 'width 1.5s ease-in-out';
+                level.style.width = width + '%';
+            }, 200);
+        });
+    };
+    
+    // Observer for skill section
+    const skillsSection = document.querySelector('#Skills');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateSkills();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    observer.observe(skillsSection);
+
+    // contact form handling
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const form = e.target;
+        const formData = new FormData(form);
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        
+        // Disable submit button and show loading state
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            });
+            
+            // Check if response is ok
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            // Check if response is JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('Response is not JSON');
+            }
+            
+            const data = await response.json();
+            
+            if (data.status === 'success') {
+                // Show success message
+                showMessage(data.message, 'success');
+                form.reset();
+            } else {
+                // Show error message
+                showMessage(data.message, 'error');
+            }
+            
+        } catch (error) {
+            console.error('Error details:', error);
+            
+            // Show more specific error message
+            if (error.message.includes('JSON')) {
+                showMessage('Server response error. Your message may have been saved. Please check and try again if needed.', 'warning');
+            } else if (error.message.includes('HTTP error')) {
+                showMessage('Server error. Please try again later.', 'error');
+            } else {
+                showMessage('Network error. Please check your connection and try again.', 'error');
+            }
+        } finally {
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+        }
+    });
+
+    // Function to show messages to user
+    function showMessage(message, type) {
+        // Remove any existing message
+        const existingMessage = document.querySelector('.form-message');
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+        
+        // Create message element
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message ${type}`;
+        messageDiv.textContent = message;
+        
+        // Add styles for the message
+        messageDiv.style.cssText = `
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            font-weight: 500;
+            ${type === 'success' 
+                ? 'background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;' 
+                : type === 'warning'
+                ? 'background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7;'
+                : 'background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;'
+            }
+        `;
+        
+        // Insert message before the form
+        const form = document.getElementById('contactForm');
+        form.parentNode.insertBefore(messageDiv, form);
+        
+        // Auto remove message after 5 seconds
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000);
+        
+        // Scroll to message
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
 </body>
 </html>
