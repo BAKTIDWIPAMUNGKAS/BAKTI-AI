@@ -161,8 +161,8 @@ header.scrolled {
 }
 
 .home-img img {
-    width: 850px;
-    height: 850px;
+    width: 1050px;
+    height: 1050px;
     object-fit: cover;
     animation: float 6s ease-in-out infinite;
 }
@@ -1464,3 +1464,4 @@ padding: 0;
 }
 
 }
+
