@@ -983,13 +983,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .home {
+    .hero {
         min-height: 100vh;
         padding-top: 90px;
         padding-bottom: 2rem;
     }
     
-    .home-container {
+    .hero-container {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
@@ -997,7 +997,7 @@ footer {
     }
     
     /* Image first on mobile */
-    .home-img {
+    .hero-img {
         order: 1;
         width: 100%;
         max-width: 280px;
@@ -1005,7 +1005,7 @@ footer {
         animation: float 6s ease-in-out infinite, fadeInScale 0.8s ease;
     }
     
-    .home-img img {
+    .hero-img img {
         width: 100%;
         height: auto;
         aspect-ratio: 1;
@@ -1016,7 +1016,7 @@ footer {
     }
     
     /* Content below image */
-    .home-content {
+    .hero-content {
         order: 2;
         display: flex;
         flex-direction: column;
@@ -1024,21 +1024,21 @@ footer {
         animation: fadeInUp 0.8s ease 0.2s both;
     }
     
-    .home-content h1 {
+    .hero-content h1 {
         font-size: 2rem;
         line-height: 1.3;
         margin-bottom: 1rem;
         animation: fadeInUp 0.8s ease 0.3s both;
     }
     
-    .home-content h3 {
+    .hero-content h3 {
         font-size: 1rem;
         justify-content: center;
         margin-bottom: 1.5rem;
         animation: fadeInUp 0.8s ease 0.4s both;
     }
     
-    .home-content p {
+    .hero-content p {
         font-size: 0.95rem;
         margin: 0 auto 1.5rem;
         max-width: 100%;
@@ -1066,8 +1066,8 @@ footer {
     }
     
     /* Button styling for mobile */
-    .home-content .btn,
-    .home-content .btn-outline {
+    .hero-content .btn,
+    .hero-content .btn-outline {
         display: block;
         width: 100%;
         max-width: 280px;
@@ -1078,7 +1078,7 @@ footer {
         animation: fadeInUp 0.8s ease 0.7s both;
     }
     
-    .home-content .btn-outline {
+    .hero-content .btn-outline {
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -1134,23 +1134,23 @@ footer {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
-    .home {
+    .hero {
         padding-top: 80px;
     }
     
-    .home-img {
+    .hero-img {
         max-width: 220px;
     }
     
-    .home-content h1 {
+    .hero-content h1 {
         font-size: 1.7rem;
     }
     
-    .home-content h3 {
+    .hero-content h3 {
         font-size: 0.95rem;
     }
     
-    .home-content p {
+    .hero-content p {
         font-size: 0.9rem;
     }
     
