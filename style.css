@@ -19,6 +19,7 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -1210,4 +1211,5 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 
