@@ -1146,6 +1146,22 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
     }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem; 
+    }
+
+    .contact-form {
+        padding: 2rem; 
+    }
+
+    .contact-container {
+        gap: 3rem; 
+    }
 }
 
 /* Extra animations */
@@ -1225,6 +1241,7 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 
 
 
