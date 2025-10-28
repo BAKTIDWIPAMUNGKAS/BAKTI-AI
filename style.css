@@ -1162,6 +1162,17 @@ footer {
     .contact-container {
         gap: 3rem; 
     }
+
+    .contact-item {
+        padding: 0.8rem;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 0.5rem;
+    }
 }
 
 /* Extra animations */
@@ -1241,6 +1252,7 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 
 
 
