@@ -1137,6 +1137,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .stats {
+        /* 2. Ini yang memperbaiki 'About' */
+        grid-template-columns: 1fr;
+        gap: 2.5rem; /* Menambah jarak vertikal antar stats */
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
     }
@@ -1219,6 +1225,7 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 
 
 
