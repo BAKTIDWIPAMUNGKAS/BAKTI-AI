@@ -209,7 +209,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-leaf"></i>
+                        <img src="gambar-plantify.png" alt="Plantify App" class="project-thumbnail">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Plantify – AI-Powered Plant Disease Diagnosis App</h3>
@@ -229,7 +229,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-comments"></i>
+                        <img src="gambar-plantify.png" alt="Plantify App" class="project-thumbnail">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Sentiment Analysis: LSTM vs Naive Bayes on Iran-Israel Conflict Tweets</h3>
@@ -484,8 +484,90 @@
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         });
+
+        /* ========================================
+           REACT-LIKE STATE & RENDER LOGIC
+           ======================================== */
+           
+        // 1. Data State (mirip dengan useState di React)
+        const projectsData = [
+            {
+                id: 1,
+                title: "Plantify – AI-Powered Plant Disease Diagnosis App",
+                category: "cv",
+                tags: ["Computer Vision", "LLM", "Flask", "OpenRouter API"],
+                desc: "Built a full-stack web application enabling farmers to diagnose crop pests and diseases by uploading plant photos. Integrated a multimodal LLM (Gemma Vision via OpenRouter API).",
+                image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=600&auto=format&fit=crop", // Ganti dengan path gambar Anda, misal: "plantify.png"
+                liveLink: "#",
+                githubLink: "https://github.com/BAKTIDWIPAMUNGKAS/PLANTIFY"
+            },
+            {
+                id: 2,
+                title: "Sentiment Analysis: LSTM vs Naive Bayes",
+                category: "nlp",
+                tags: ["NLP", "LSTM", "Scikit-learn", "TensorFlow"],
+                desc: "Scraped and curated 2,000+ tweets on the Iran-Israel conflict using a Playwright-based crawler. Built a full NLP preprocessing pipeline and compared LSTM vs TF-IDF + Naive Bayes.",
+                image: "https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=600&auto=format&fit=crop", // Ganti dengan path gambar Anda
+                liveLink: "#",
+                githubLink: "https://github.com/BAKTIDWIPAMUNGKAS/Comparative-Sentiment-Analysis-of-the-Iran-Israel-Conflict-on-Twitter-Using-LSTM-and-Naive-Bayes"
+            }
+        ];
+
+        // 2. Render Function (mirip dengan me-return JSX di komponen React)
+        function renderProjects(filterType = 'all') {
+            const grid = document.getElementById('projectsGrid');
+            grid.innerHTML = ''; // Kosongkan grid terlebih dahulu
+
+            // Filter data
+            const filteredProjects = filterType === 'all' 
+                ? projectsData 
+                : projectsData.filter(project => project.category === filterType);
+
+            // Mapping data menjadi HTML Element
+            filteredProjects.forEach(project => {
+                const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+                
+                const cardHTML = `
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="${project.image}" alt="${project.title}" class="project-thumbnail">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">${project.title}</h3>
+                            <div class="project-tags">
+                                ${tagsHTML}
+                            </div>
+                            <p class="project-desc">${project.desc}</p>
+                            <div class="project-links">
+                                <a href="${project.liveLink}" class="btn btn-primary btn-sm">View Details</a>
+                                <a href="${project.githubLink}" class="btn btn-outline btn-sm">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Masukkan ke dalam DOM
+                grid.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // 3. Event Listener untuk Filter Buttons
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Hapus class active dari semua tombol
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Tambahkan class active ke tombol yang diklik
+                this.classList.add('active');
+                
+                // Dapatkan nilai kategori dan render ulang
+                const filterValue = this.getAttribute('data-filter');
+                renderProjects(filterValue);
+            });
+        });
+
+        // 4. Inisialisasi render pertama kali halaman dimuat
+        renderProjects();
     </script>
-
-
 </body>
 </html>
