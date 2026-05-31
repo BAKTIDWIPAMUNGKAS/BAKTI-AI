@@ -884,7 +884,8 @@ footer {
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
+        transform: translateX(100%); /* Menyembunyikan menu ke kanan tanpa menambah lebar halaman */
         width: 280px;
         height: 100vh;
         background: linear-gradient(90deg, #654ea3 0%, #eaafc8 100%);
@@ -894,13 +895,13 @@ footer {
         gap: 0;
         padding: 100px 0 2rem 0;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
-        transition: right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Animasi diubah ke transform */
         z-index: 999;
         overflow-y: auto;
     }
     
     .nav-links.active {
-        right: 0;
+        transform: translateX(0);
     }
     
     .nav-links a {
