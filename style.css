@@ -882,10 +882,10 @@ footer {
     }
     
     .nav-links {
-        position: fixed;
+position: fixed;
         top: 0;
-        right: 0;
-        transform: translateX(100%); /* Menyembunyikan menu ke kanan tanpa menambah lebar halaman */
+        right: -280px; /* Menggunakan koordinat pixel presisi sesuai lebar navbar */
+        visibility: hidden; /* KUNCI UTAMA: Menghilangkan elemen sepenuhnya dari kalkulasi layout/scroll HP saat tertutup */
         width: 280px;
         height: 100vh;
         background: linear-gradient(90deg, #654ea3 0%, #eaafc8 100%);
@@ -895,13 +895,14 @@ footer {
         gap: 0;
         padding: 100px 0 2rem 0;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Animasi diubah ke transform */
+        transition: right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), visibility 0.5s ease;
         z-index: 999;
         overflow-y: auto;
     }
     
     .nav-links.active {
-        transform: translateX(0);
+        right: 0;
+        visibility: visible;
     }
     
     .nav-links a {
