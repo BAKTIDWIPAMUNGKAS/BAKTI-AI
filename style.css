@@ -1312,6 +1312,14 @@ position: fixed;
         max-width: 280px;
         justify-content: center;
     }
+
+    .hero-content .role {
+        justify-content: center; /* Membuat teks sejajar di tengah */
+        flex-wrap: wrap; /* Mengizinkan teks turun baris dengan rapi jika terlalu panjang */
+        font-size: 1.2rem; /* Mengecilkan ukuran font sedikit agar lebih proporsional */
+        gap: 0.4rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
