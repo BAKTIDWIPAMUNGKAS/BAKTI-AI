@@ -71,15 +71,15 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>About Me</h2>
                 <p>Get to know my journey, experience, and passion for machine learning and AI</p>
             </div>
             <div class="about-content">
-                <div class="about-image">
+                <div class="about-image reveal-left">
                     <img src="About.png" alt="Bakti Dwi Pamungkas">
                 </div>
-                <div class="about-text">
+                <div class="about-text reveal-right">
                     <h3>Informatics Engineering Student & AI/ML Enthusiast</h3>
                     <p>I'm Bakti Dwi Pamungkas, a 3rd-year Informatics Engineering student (Semester 6) at Universitas Siliwangi, Sumedang, Indonesia. My academic and project focus is on Artificial Intelligence and Machine Learning — specifically deep learning architectures, computer vision, and natural language processing.</p>
                     <p>I've completed the Machine Learning Specialization from Coursera (University of Washington) and the Machine Learning Learning Path from DBS Foundation Coding Camp. I apply these skills in end-to-end ML pipelines and real-world applications.</p>
@@ -107,7 +107,7 @@
 <!-- Skills Section -->
 <section class="skills" id="skills">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title reveal">
             <h2>Technical Skills</h2>
             <p>My expertise in machine learning, deep learning, and software development</p>
         </div>
@@ -201,7 +201,7 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Featured Projects</h2>
                 <p>A showcase of my work in machine learning, AI, and data science</p>
             </div>
@@ -209,7 +209,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="gambar-plantify.png" alt="Plantify App" class="project-thumbnail">
+                        <img src="plantify_img.png" alt="Plantify App" class="project-thumbnail">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Plantify – AI-Powered Plant Disease Diagnosis App</h3>
@@ -254,12 +254,12 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Get In Touch</h2>
                 <p>Interested in collaboration or have a question? Reach out to me</p>
             </div>
             <div class="contact-container">
-                <div class="contact-form">
+                <div class="contact-form reveal-left">
                     <h3>Send a Message</h3>
                     <form id="contactForm">
                         <div class="form-group">
@@ -277,7 +277,7 @@
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
-                <div class="contact-info">
+                <div class="contact-info reveal-right">
                     <h3>Contact Information</h3>
                     <p>Feel free to reach out for internship opportunities, collaborations, or just to say hello. I'll get back to you as soon as possible.</p>
                     
@@ -332,8 +332,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
+    <footer>        <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Bakti.AI</h3>
@@ -376,6 +375,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" title="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check"></i></div>
+        <span id="toastMsg">Pesan terkirim!</span>
+    </div>
+
+    <!-- Custom cursor (desktop only) -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
     <script>
         // Mobile menu toggle
@@ -420,26 +432,8 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                     document.querySelector('.nav-links').classList.remove('active');
-                }
-            });
-        });
-        
-        // Active link highlighting
-        window.addEventListener('scroll', function() {
-            let scrollPosition = window.scrollY;
-            
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-links a').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + sectionId) {
-                            link.classList.add('active');
-                        }
-                    });
+                    document.body.style.overflow = '';
+                    document.querySelector('.menu').classList.remove('active');
                 }
             });
         });
@@ -481,9 +475,178 @@
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
+            showToast('✅ Pesan terkirim! Saya akan segera membalas.', 'check');
             this.reset();
         });
+
+        /* ========================================
+           EFEK INTERAKTIF (setara React UX)
+           ======================================== */
+
+        // 1. TOAST NOTIFICATION
+        function showToast(msg, icon = 'check') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            const toastIcon = toast.querySelector('.toast-icon i');
+            toastMsg.textContent = msg;
+            toastIcon.className = icon === 'check' ? 'fas fa-check' : 'fas fa-info-circle';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3500);
+        }
+
+        // 2. SCROLL REVEAL — mirip useEffect + IntersectionObserver di React
+        function initScrollReveal() {
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, i * 80);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealEls.forEach(el => observer.observe(el));
+        }
+
+        // Tambah reveal class ke skill cards & project cards
+        document.querySelectorAll('.skill-circle-card').forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = (i * 60) + 'ms';
+        });
+
+        // 3. RIPPLE EFFECT pada semua tombol
+        document.querySelectorAll('.btn, .filter-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                this.appendChild(ripple);
+                ripple.addEventListener('animationend', () => ripple.remove());
+            });
+        });
+
+        // 4. SCROLL TO TOP BUTTON
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 5. ANIMATED COUNTER untuk Stats (mirip useEffect hook)
+        function animateCounter(el, target, suffix = '') {
+            let start = 0;
+            const isText = isNaN(parseInt(target));
+            if (isText) { el.textContent = target; return; }
+            const num = parseInt(target);
+            const duration = 1200;
+            const step = duration / num;
+            const timer = setInterval(() => {
+                start++;
+                el.textContent = start + suffix;
+                if (start >= num) {
+                    el.textContent = target;
+                    clearInterval(timer);
+                }
+            }, step);
+        }
+
+        function initCounters() {
+            const statEls = document.querySelectorAll('.stat-item h4');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target, entry.target.dataset.target || entry.target.textContent);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            statEls.forEach(el => {
+                el.dataset.target = el.textContent;
+                observer.observe(el);
+            });
+        }
+
+        // 6. CUSTOM CURSOR (desktop)
+        const cursorDot = document.getElementById('cursorDot');
+        const cursorRing = document.getElementById('cursorRing');
+        let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+        if (window.innerWidth > 768) {
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX - 4 + 'px';
+                cursorDot.style.top = mouseY - 4 + 'px';
+            });
+
+            function animateCursor() {
+                ringX += (mouseX - ringX) * 0.12;
+                ringY += (mouseY - ringY) * 0.12;
+                cursorRing.style.left = ringX - 18 + 'px';
+                cursorRing.style.top = ringY - 18 + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Cursor scale on hover
+            document.querySelectorAll('a, button, .skill-circle-card, .project-card, .filter-btn').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorRing.style.transform = 'scale(1.8)';
+                    cursorRing.style.borderColor = 'rgba(236,72,153,0.7)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorRing.style.transform = 'scale(1)';
+                    cursorRing.style.borderColor = 'rgba(139,92,246,0.5)';
+                });
+            });
+        }
+
+        // 7. PARALLAX efek pada hero background
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            const scrolled = window.scrollY;
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.backgroundPositionY = scrolled * 0.4 + 'px';
+            }
+        });
+
+        // 8. ACTIVE SECTION highlight di nav dengan transisi smooth
+        function updateActiveNav() {
+            let scrollPosition = window.scrollY;
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + sectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+        window.addEventListener('scroll', updateActiveNav);
+
+        // Init semua fitur
+        window.addEventListener('load', () => {
+            initScrollReveal();
+            initCounters();
+        });
+
 
         /* ========================================
            REACT-LIKE STATE & RENDER LOGIC
